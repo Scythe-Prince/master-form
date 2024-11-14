@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./profform.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <title>استماره الدكتوراة </title>
+</head>
+
+<body>
+  <section class="container">
+    <header>استمارة الدكتوراة</header>
+    <form id="formtag"  action="project.html" method="post">
+        <div id="frm" class="form">
+      <!-- Name -->
+      <div id="user-name" class="input-box">
+        <label>الاسم</label>
+        <input id="fullname" name="fu2"type="text" placeholder="ادخل الاسم بالكامل"required/>
+        <div class="error"></div>
+        <span id="sml-txt2">ادخل الاسم ثلاثي</span>
+      </div>
+      <!-- Name -->
+
+      <!-- email -->
+
+      <div id="user-mail" class="input-box">
+        <label>البريد الالكتروني</label>
+        <input id="email" name="em2"type="text" placeholder="ادخل البريد الالكتروني" required/>
+        <div class="error"></div>
+      </div>
+      <!-- email -->
+      <!--uni-->
+      <div class="column">
+        <div id="user-uni" class="input-box">
+          <label>الكلية</label>
+          <input id="uniName" name="un2" type="text" placeholder="ادخل الكلية"required/>
+          <div class="error"></div>
+        </div>
+        <div class="input-box">
+          <label>سنة التخرج</label>
+          <input type="number" name="nu2" min="1900" max="2099" step="1" value="2000"required />
+        </div>
+        <div class="input-box">
+          <label for="grade">التقدير العام</label>
+          <select name="gr1" id="grade" required>
+            <option hidden>التقدير العام</option>
+            <option value="مقبول" id="d" value="d" disabled="disabled">
+              مقبول
+            </option>
+            <option  id="c" value="جيد">جيد</option>
+            <option  id="b" value="جيدجدا">جيد جدا</option>
+            <option  id="a" value="امتياز">امتياز</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-box">
+        <label>القسم</label>
+      </div>
+      <div id="deprt" class="column">
+        <div class="select-box special-box">
+          <select name="he2" id="speciality" required>
+            <option hidden>القسم</option>
+            <option value="قسم الرياضيات و علوم الحاسب">
+              قسم الرياضيات و علوم الحاسب
+            </option>
+            <option value="قسم الكيمياء">قسم الكيمياء</option>
+            <option value="قسم الفيزياء">قسم الفيزياء</option>
+            <option value="قسم النبات">قسم النبات</option>
+            <option value="قسم علم الحيوان">قسم علم الحيوان</option>
+            <option value="قسم الجيولوجيا">قسم الجيولوجيا</option>
+            <option value="قسم علوم البحار">قسم علوم البحار</option>
+            <option value="قسم علوم البيئة">قسم علوم البيئة</option>
+          </select>
+        </div>
+        <label class="btn-submit2" onclick="getOption() ">تأكيد! </label>
+      </div>
+      <span id="sml-txt">يجب الضغط على "تأكيد" لظهور الماجستير المتاح بالقسم المخصص</span>
+
+      <div class="input-box">
+        <label>تخصص الماجستير</label>
+      </div>
+      <div class="column">
+        <div id="av-d" class="select-box special-box">
+          <select name="sp2"id="speciality2" required>
+            <option hidden>الماجستير</option>
+          </select>
+        </div>
+        <label class="btn-submit2" onclick="getSecondOption() ">تأكيد!
+        </label>
+      </div>
+
+
+      <span id="sml-txt4">يجب الضغط على "تأكيد" لظهور تخصص الدكتوراة المتاح بالماجستير
+        المخصص</span>
+      <div class="input-box">
+        <label>تخصص الدكتوراة</label>
+      </div>
+      <div id="av-d2" class="select-box special-box">
+        <select name="sp3" id="speciality3" required>
+          <option hidden>الدكتوراة</option>
+        </select>
+      </div>
+      <span id="sml-txt3">يرجي اختيار تخصص الدكتوراة</span>
+      <div class="column">
+        <div id="user-phone" class="input-box">
+          <label>رقم الهاتف</label>
+          <input id="phonenumber" name="ph2"type="number" placeholder="ادخل رقم الهاتف" required/>
+          <div class="error"></div>
+        </div>
+        <div id="user-nNumber" class="input-box">
+          <label>الرقم القومي</label>
+          <input id="Nationalnumber" name="Na2" type="number" placeholder="ادخل الرقم القومي" required/>
+          <div class="error"></div>
+        </div>
+      </div>
+      <!--personal numbers-->
+
+      <div class="gender-box">
+        <h3>الجنس</h3>
+        <div class="gender-option">
+            <div class="gender">
+              <label for="check-male" class="label-special">ذكر</label>
+              <input type="radio" id="check-male" name="gender2" value="ذكر" checked />
+              <label for="check-female" class="label-special">انثي</label>
+              <input type="radio" id="check-female" name="gender2" value="انثي" />
+            </div>
+      </div>
+
+    </div>
+    <input type="submit" class="btn-submit"  value="تسجيل الدكتوراه" />
+    </form>
+  </section>
+  <script src="./profform.js"></script>
+</body>
+
+</html>
